@@ -33,13 +33,13 @@ public class CreateBot extends TelegramLongPollingBot {
     @Override
     public String getBotUsername() {
         //
-        return "ddcmybot";
+        return "";
     }
 
     @Override
     public String getBotToken() {
         //
-        return "6076900482:AAEubi8o775ttgfQbkdTSAA4806eP45T9jA";
+        return "";
     }
     
 }
