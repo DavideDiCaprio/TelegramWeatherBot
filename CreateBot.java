@@ -5,19 +5,22 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 public class CreateBot extends TelegramLongPollingBot {
 
+    
+ 
     @Override
     public void onUpdateReceived(Update update) {
 
         System.out.println(update.getMessage().getText());
         System.out.println(update.getMessage().getFrom().getFirstName());
+        System.out.println(update.getMessage().getChatId().toString()); //to get ChatID for use it in your configText
 
 
         String command = update.getMessage().getText();
 
         //command must be created in telegram
 
-        if (command.equals("/run")) {
-            String message = "Run Forrest";
+        if (command.equals("/your command")) {
+            String message = "your command test";
             SendMessage response = new SendMessage();
             response.setChatId(update.getMessage().getChatId().toString());
             response.setText(message);
